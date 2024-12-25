@@ -1,0 +1,22 @@
+﻿@model Comic.Models.ComicBook
+
+<h1>Thêm truyện mới</h1>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Name">Tên truyện</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Author">Tác giả</label>
+        <input type="text" asp-for="Author" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="PricePerDay">Giá mỗi ngày</label>
+        <input type="number" asp-for="PricePerDay" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Quantity">Số lượng</label>
+        <input type="number" asp-for="Quantity" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+</form>

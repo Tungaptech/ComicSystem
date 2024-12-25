@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Comic.Models.ComicBook>
+
+<h1>Danh sách truyện</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Tên</th>
+        <th>Tác giả</th>
+        <th>Giá mỗi ngày</th>
+        <th>Số lượng</th>
+        <th>Hành động</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var comicBook in Model)
+    {
+        <tr>
+            <td>@comicBook.Name</td>
+            <td>@comicBook.Author</td>
+            <td>@comicBook.PricePerDay</td>
+            <td>@comicBook.Quantity</td>
+            <td>
+                <a href="/ComicBook/Details/@comicBook.ComicBookId" class="btn btn-info">Chi tiết</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
